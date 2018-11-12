@@ -23,4 +23,4 @@ To install the application follow the instructions below:
 * npm install
 ```
 ### FriendFinder Demo
-*FriendFinder* is deployed to Heroku. Please check it out [here](#). 
+*FriendFinder* is deployed to Heroku. Please check it out [here](https://rocky-savannah-77785.herokuapp.com/). 
