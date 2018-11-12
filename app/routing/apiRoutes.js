@@ -1,9 +1,10 @@
 // require in data from friends.js
-let friends = require('../data/friends');
+var friends = require('../data/friends.js');
 
 // build route to view all of friends
 module.exports = function (app) {
 
+  // display all friends
   app.get("/api/friends", function (req, res) {
     res.json(friends);
   });
@@ -28,13 +29,13 @@ module.exports = function (app) {
     let totalDifference = 0;
 
     // Nested for loop, loop through friend possibilites in database
-    for (let i = 0; i < friends.length; i++) {
+    for (var i = 0; i < friends.length; i++) {
 
       console.log(friends[i]);
       totalDifference = 0;
 
       // loop through all scores of each friend
-      for (let j = 0; j < friends[i].scores[j]; j++) {
+      for (var j = 0; j < friends[i].scores[j]; j++) {
 
         // totalDifference takes the sum of the difference calculated between the scores
         totalDifference += Math.abs(parseInt(userScores[j]) - parseInt(friends[i].scores[j]));
@@ -57,4 +58,4 @@ module.exports = function (app) {
     res.json(bestMatch);
   });
 
-}
+};
