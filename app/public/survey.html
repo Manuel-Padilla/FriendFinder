@@ -122,7 +122,7 @@
       <option value="4">4</option>
       <option value="5">5 (Strongly Agree)</option>
     </select>
-    
+
     <br>
     <br>
 
@@ -194,6 +194,63 @@
     </footer>
 
   </div>
+
+  <script type="text/javascript">
+
+    // capture the form inputs
+    $("#submit").on("click", function () {
+
+      // validate the input form and assume it is "true" but...
+      function validateForm() {
+        let isValid = true;
+        $(".form-control").each(function () { // if name and url are empty, mark it false
+          if ($(this).val() === "") {
+            isValid = false;
+          }
+        });
+
+        $(".chosen-select").each(function () { // or if questions are marked blank, mark it false to keep bad data out of system 
+
+          if ($(this).val() === "") {
+            isValid = false;
+          }
+        });
+        return isValid;
+      }
+
+      // if all required fields are filled
+      if (validateForm()) {
+        // create an object for the user's data
+        let userData = {
+          name: $("#name").val(),
+          photo: $("#photo").val(),
+          scores: [
+            $("#q1").val(),
+            $("#q2").val(),
+            $("#q3").val(),
+            $("#q4").val(),
+            $("#q5").val(),
+            $("#q6").val(),
+            $("#q7").val(),
+            $("#q8").val(),
+            $("#q9").val(),
+            $("#q10").val(),
+          ]
+        };
+
+        // grab the URL of the website
+        let currentURL = window.location.origin;
+
+        // AJAX post the data to the friends API
+        $.post(currentURL = "/api/friends", userData, function (data) {
+
+          // alert to know if working
+          alert("working");
+        });
+      };
+    });
+
+  </script>
 
 </body>
 
