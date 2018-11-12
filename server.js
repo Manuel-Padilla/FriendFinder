@@ -4,11 +4,8 @@ const bodyParser = require('body-parser');
 
 const PORT = process.env.PORT || 3030;
 
-// create application/json parser
-const jsonParser = bodyParser.json()
- 
 // create application/x-www-form-urlencoded parser
-const urlencodedParser = bodyParser.urlencoded({ extended: false })
+app.use(bodyParser.urlencoded({ extended: true }));
 
 // parse various different custom JSON types as JSON
 app.use(bodyParser.json({ type: 'application/*+json' }))
