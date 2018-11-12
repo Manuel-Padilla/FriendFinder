@@ -1,15 +1,28 @@
 {
   "name": "FriendFinder",
   "version": "1.0.0",
-  "description": "",
+  "description": "A full-stack site that takes in results from users' surveys, then compares their answers with those from other users.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "dotenv": "^6.1.0"
-  }
+    "body-parser": "^1.18.3",
+    "dotenv": "^6.1.0",
+    "express": "^4.16.4",
+    "path": "^0.12.7"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Manuel-Padilla/FriendFinder.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Manuel-Padilla/FriendFinder/issues"
+  },
+  "homepage": "https://github.com/Manuel-Padilla/FriendFinder#readme"
 }
