@@ -1,18 +1,18 @@
 // require in data from friends.js
-let friends = require("../data/friends.js");
+let friends = require('../data/friends');
 
 // build route to view all of friends
 module.exports = function (app) {
-  
-  app.get("/api/friends", function(req, res) {
+
+  app.get("/api/friends", function (req, res) {
     res.json(friends);
   });
 
-  app.post("/api/friends", function(req, res) {
+  app.post("/api/friends", function (req, res) {
 
     let bestMatch = {
       name: "",
-      photo: "", 
+      photo: "",
       friendDifference: 100
     };
 

@@ -1,5 +1,5 @@
 // creating path package
-const path = require("path");
+const path = require('path');
 
 // building routes in module.exports function, paths will later be included in the server
 module.exports = function (app) {
