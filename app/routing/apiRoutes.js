@@ -12,7 +12,7 @@ module.exports = function (app) {
   app.post("/api/friends", function (req, res) {
 
     var newFriend = req.body;
-    var newFriendResponses = newFriend.scores;
+    var newFriendsResponses = newFriend.scores;
     var bestMatch = {
       name: "FRIEND",
       photo: "",
