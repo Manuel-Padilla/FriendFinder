@@ -28,12 +28,12 @@ module.exports = function (app) {
       // loop through all scores of each friend
       for (var j = 0; j < friendsData[i].scores.length; j++) {
 
-        // totalDifference takes the sum of the difference calculated between the scores
+        // diffCounter takes the sum of the difference calculated between the scores
         diffCounter += Math.abs(parseInt(friendsData[i].scores[j]) - parseInt(newFriendsResponses[j]))
 
       }
 
-        // if the sum of totalDifferences is less then the differences of the current "best match"
+        // if the sum of diffCounter is less then the differences of the current "best match"
         if (bestMatch.bestMatchDifference > diffCounter) {
 
           // reset the bestMatch to be the new best friend
